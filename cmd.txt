@@ -1,0 +1,51 @@
+sudo apt update
+sudo apt dist-upgrade
+sudo raspi-config
+sudo apt install etckeeper
+sudo apt install -y vim emacs byobu zsh
+sudo apt install -y git git-extras
+sudo apt install htop atop nethogs iftop
+sudo apt install aptitude apt-file
+sudo apt install -y build-essential libblas-dev liblapack-dev libatlas-base-dev gfortran libyaml-cpp-dev raspberrypi-kernel-headers
+
+sudo apt install -y python-dev ipython python-sklearn python-smbus
+sudo apt install -y python-termcolor
+sudo apt install python-frozendict
+sudo apt install python-tables
+pip install comptests
+pip install procgraph
+sudo pip install scipy --upgrade
+sudo pip install ruamel.yaml --upgrade
+sudo apt install -y i2c-tools
+sudo apt-mark hold raspberrypi-kernel raspberrypi-kernel-headers raspberrypi-kernel set on hold. raspberrypi-kernel-headers set on hold
+
+///////////////////////
+
+git clone git@github.com:duckietown/rtl8822bu.git
+cd rtl8822bu
+make
+sudo make install
+
+///////////////////////
+
+http://wiki.ros.org/kinetic/Installation/Ubuntu
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt update
+sudo apt install ros-kinetic-desktop-full
+sudo apt install
+ros-kinetic-{tf-conversions,cv-bridge,image-transport,camera-info-manager,theora-image-transport,joy,image-proc,compressed
+sudo rosdep init
+rosdep update
+
+///////////////////////
+
+sudo apt install libxml2-dev libxslt1-dev
+sudo apt install libffi6 libffi-dev
+sudo apt install python-dev python-numpy python-matplotlib
+sudo apt install virtualenv
+sudo apt install bibtex2html pdftk
+sudo apt install imagemagick
+
+git lfs clone --depth 100 git@github.com:duckietown/duckuments ~/duckuments
